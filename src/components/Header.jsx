@@ -33,9 +33,12 @@ const Header = () => {
         <div className="container flex justify-between items-center">
           {/* Logo */}
           <div>
-            <NavLink to="/" className="font-bold text-2xl sm:text-3xl flex gap-2">
+            <NavLink
+              to="/"
+              className="font-bold text-2xl sm:text-3xl flex gap-2"
+            >
               <img src={Logo} alt="Logo" className="w-10" />
-              Styqol
+              Styqlo
             </NavLink>
           </div>
 
@@ -122,28 +125,27 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="sm:hidden bg-white shadow-md px-4 py-3">
           <div className="flex items-center gap-2 mb-4">
-      <input
-        type="text"
-        value={mobileQuery}
-        onChange={(e) => setMobileQuery(e.target.value)}
-        placeholder="Search"
-        className="w-full rounded-full border border-gray-300 px-3 py-1 focus:outline-none focus:ring-1 focus:ring-primary"
-      />
-      <button
-        aria-label="Search"
-        className="p-2 rounded-full bg-primary text-white"
-        onClick={() => {
-          const q = mobileQuery.trim();
-          if (!q) return;
-          navigate(`/search?q=${encodeURIComponent(q)}`);
-          setMobileMenuOpen(false); // Optional: close menu after search
-        }}
-      >
-        <IoMdSearch />
-      </button>
-    </div>
+            <input
+              type="text"
+              value={mobileQuery}
+              onChange={(e) => setMobileQuery(e.target.value)}
+              placeholder="Search"
+              className="w-full rounded-full border border-gray-300 px-3 py-1 focus:outline-none focus:ring-1 focus:ring-primary"
+            />
+            <button
+              aria-label="Search"
+              className="p-2 rounded-full bg-primary text-white"
+              onClick={() => {
+                const q = mobileQuery.trim();
+                if (!q) return;
+                navigate(`/search?q=${encodeURIComponent(q)}`);
+                setMobileMenuOpen(false); // Optional: close menu after search
+              }}
+            >
+              <IoMdSearch />
+            </button>
+          </div>
           <ul className="flex flex-col gap-3">
-
             {Menu.map((data) => (
               <li key={data.id}>
                 <NavLink

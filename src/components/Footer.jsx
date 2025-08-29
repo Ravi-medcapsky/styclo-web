@@ -1,5 +1,5 @@
 import React from "react";
-import footerLogo from "../assets/logo/logo2.png"
+import footerLogo from "../assets/logo/logo1.png"
 import Banner from "../assets/logo/image.png";
 import {
   FaFacebook,
@@ -46,8 +46,8 @@ const Footer = () => {
           {/* company details */}
           <div className="py-8 px-4">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
-              <img src={footerLogo} alt="" className="max-w-[50px]" />
-              Shopsy
+              <img src={footerLogo} alt="" className="max-w-[50px] invert" />
+              Styqlo
             </h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum in
